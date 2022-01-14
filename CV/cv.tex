@@ -1,0 +1,239 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{smartdiagram}
+\usepackage{fontspec}
+% if you want to add fontawesome package
+% you need to compile the tex file with LuaLaTeX
+% References:
+%   http://texdoc.net/texmf-dist/doc/latex/fontawesome/fontawesome.pdf
+%   https://www.ctan.org/tex-archive/fonts/fontawesome?lang=en
+%\usepackage{fontawesome}
+\usepackage{metalogo}
+\usepackage{dtklogos}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,shadows}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,           % no lik border color
+    allbordercolors=white       % white border color for all
+}
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.5cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.4cm,
+    % specifies which is the distance among the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % sets the distance from the text to the border of the bubble center node
+    distance text center bubble = 0.5cm,
+    % set center bubble color
+    bubble center node color = pblue,
+    % define the list of colors usable in the diagram
+    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 0.5,
+}
+
+\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Ciarán}{Adams}
+      {Computer Science Graduate}
+      
+% Fake text to add separator      
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  	~
+  	~
+  	~
+  	~
+  	~
+  	~
+  	~
+  	~
+  \section{Address}
+    22 Ardmoulin Avenue,
+    Belfast,
+    BT13 2EA.
+    ~
+  \section{Telephone}
+    07599809607
+    ~
+  \section{EMail}
+    \href{mailto:ciaran2170@gmail.com}{\textbf{ciaran2170@}\\gmail.com}
+    ~
+  \section{Links}
+    \href{https://www.linkedin.com/in/ciaranadams/}{LinkedIn}
+    \href{https://github.com/Ciaran48/}{GitHub}
+    
+    
+    ~
+  \section{Languages}
+    \textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Irish}\includegraphics[scale=0.40]{img/5stars.png}
+    ~
+    ~
+  % use  \hspace{} or \vspace{} to change bubble size, if needed
+  \section{Programming}
+    \smartdiagram[bubble diagram]{
+        \textbf{Java},
+        \textbf{C\#},
+        \textbf{C++},
+        \textbf{Python},
+        \textbf{\hspace{-3mm}HTML/CSS},
+        \textbf{\hspace{-1mm}Lua},
+        \textbf{\hspace{-2mm}SQL}
+    }
+    ~
+    ~
+  \section{Personal Skills}
+    \smartdiagram[bubble diagram]{
+        \textbf{Team}\\\textbf{Player},
+        \textbf{Quick}\\\textbf{Learner},
+        \textbf{Adaptive},
+        \textbf{Focused},
+        \textbf{\hspace{-4mm}Problem}\\\textbf{Solving},
+        \textbf{\vspace{-10mm}Time\vspace{2mm}}\\\textbf{Management},
+        \textbf{\hspace{-2mm}Organized\vspace{-3mm}}
+        
+    }
+    ~
+\end{aside}
+~
+\section{Personal Summary}
+{I would describe myself as a highly motivated and hardworking individual, a quick learner and enjoy working as part of a team. I am also quite friendly and reliable and & enjoy meeting new people. Above all I respect peoples beliefs, decisions and opinions. As much as I enjoy hard work, taking the opportunity to help is always something I will do. I tend to take instructions quite well, however shall the need arise I can use my own initiative. I am as fluent with Irish as with English this is due to the fact I have been speaking it since I was 4 years old.}
+\begin{entrylist}
+
+\end{entrylist}
+
+\section{Technical Skills}
+\begin{entrylist}
+
+  \entry	
+   {Languages} 
+   {Java, C\#, C++, JavaScript, HTML/CSS, SQL, Python, Lua}
+   {}
+   {These are the languages that I am most experienced in}
+      
+  \entry
+  {Tools} 
+  {Eclipse/IntelliJ, Visual Studio, Love2D, Unity3D, Processing, BlueJ, Latex}	
+  {}
+  {I've used multiple IDEs over the course of my education. I'm most proficient with Eclipse and Visual Studio Code. I've competent experience with Love2d. I've created multiple Processing programs. In addition to this I have minor experience using Latex upon which this CV was created with.\\}
+   
+  \entry
+  {Databases}	
+  {MySQL, SQL, MongoDB}
+  {}
+  {I am highly proficient with MySQL and MongoDB. I've used different database types as part of my coursework and have developed programs that incorporate databases in 	   some way.\\}
+
+
+\end{entrylist}
+\\
+
+\section{Software Projects}
+\begin{entrylist}
+  \entry
+  {2021}
+  {Java Website with Bootstrap}
+  {Personal Project}
+  {Group Project in which a website was created for a university that would allow
+  students to enroll, pay tuition, choose classes, view a timetable, create an account.}
+
+  \entry
+  {2021}
+  {LUA Project}
+  {Final Year Game Project at University}
+  {A game created within Love2d written in Lua.
+  \\ \url{https://www.youtube.com/watch?v=cM81ciqGlLk}}
+  
+  \entry
+  {2020}
+  {Pandemic Prediction Analysis }
+  {Final Year Dissertation}
+  {A program was created that would read the selected dataset then normalise the data. Using an SVM Model and Linear regression Model to predict the Covid-19 Cases, deaths and recoveries with the data from the datasets. 
+  \\ \url{https://drive.google.com/file/d/1f5TN_ufgevGT93ZJRLGP9QHbvh336Fwo/view?usp=sharing}}
+\end{entrylist}
+\pagebreak
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2017 - 2021}
+    {B.Sc. (Hons) in Computer Science}
+    {Grade 2:1}
+    {\textbf{Liverpool Hope University}:\\ 
+    Mobile Application Development - Lua with Love2d,\\
+    Database Technology - MySql and MongoDB,\\
+    Website Development - HTML, PHP, Javascript, Xampp and SQL,\\
+    Object Orientated Software Development - Python, Java, c\# and C++,\\
+    AR/VR Technology - Unity,\\
+    Artificial Intelligence  - Python and Torch,\\}
+
+  \entry
+    {2010 - 2017}
+    {Colaiste Feirste}
+    {Previous}
+    {\textbf{A- Level's and GCSE's}: \\ 
+    The qualifications I currently hold are eight GCSEs all C grade or above and three A-levels. These were done in Colaiste Feirste where all my studies had been taught and learnt in the Irish language upon which i am a fluent speaker. This shows that as I have gone to a university which has been a completely different experience for me learning education in English which I'm also fluent in and to exceed really shows my value to overcome and adapt to new situations.
+
+    }
+    
+\end{entrylist}
+
+\section{Employment History}
+
+\begin{entrylist}
+	
+	\entry
+	{2021-Present}
+	{Self Studying}
+	{Taking time out to focus on my programming skills primarily java.}
+	
+	\entry
+	{2020-2021}
+	{Home Bargains, Boucher Road, Belfast}
+	{Team Member}
+	
+	\entry
+	{2017 - 2020}
+	{McDonald's, Belfast-Liverpool.}
+	{Crew Member}
+	
+\end{entrylist}
+
+\section{References}
+\begin{entrylist}
+	\entry
+	{}
+	{Sam Mayger}
+	{Previous Employer}
+	{Supervisor, Home bargains, \\ Home Bargains \\  Email: sammmayger@gmail.com}
+
+	\\
+	\entry
+		{}
+	{Katrina Fox}
+	{Previous Employer}
+	{Business Manager, \\ McDonald's \\ Email: katrina.fox@uk.mcd.com.}
+\end{entrylist}
+
+\end{document}
+
